@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/app_theme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.m.tripcard.ui.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
