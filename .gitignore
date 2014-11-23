@@ -1,0 +1,20 @@
+#################
+## Project Name : TripCard
+#################
+
+#general files
+TripCard/bin/*
+TripCard/gen/*
+*.class
+*.swp
+*~
+
+# Local configuration file (sdk path, etc)
+proguard.cfg
+project.properties
+proguard-project.txt
+.settings/
+.classpath
+.project
+
+
