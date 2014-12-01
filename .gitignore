@@ -18,5 +18,8 @@ proguard-project.txt
 .settings/
 .classpath
 .project
+.factorypath
+lint
+
 
 
