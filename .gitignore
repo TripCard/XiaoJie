@@ -19,7 +19,9 @@ proguard-project.txt
 .classpath
 .project
 .factorypath
-lint
+
+TripCard/lint.xml
+
 
 
 
