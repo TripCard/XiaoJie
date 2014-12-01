@@ -1,4 +1,4 @@
-package com.m.tripcard.bean.verify;
+package com.m.tripcard.model.verify;
 
 public class InputValidate {
 	private boolean pass;

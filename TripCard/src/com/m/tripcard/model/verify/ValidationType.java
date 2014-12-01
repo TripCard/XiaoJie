@@ -1,6 +1,6 @@
-package com.m.tripcard.bean;
+package com.m.tripcard.model.verify;
 
-public enum Operation {
+public enum ValidationType {
 	/**
 	 * ×¢²á
 	 */
@@ -14,5 +14,5 @@ public enum Operation {
 	/**
 	 * ÑéÖ¤ÕË»§
 	 */
-	Login,
+	VerifyAccount,
 }

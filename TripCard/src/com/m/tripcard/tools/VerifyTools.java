@@ -1,7 +1,8 @@
 package com.m.tripcard.tools;
 
 import com.m.tripcard.R;
-import com.m.tripcard.bean.verify.InputValidate;
+import com.m.tripcard.model.verify.InputValidate;
+
 import android.content.Context;
 import android.widget.EditText;
 
