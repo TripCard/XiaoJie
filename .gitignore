@@ -5,6 +5,8 @@
 #general files
 TripCard/bin/*
 TripCard/gen/*
+CustomShapeImageView/bin/*
+CustomShapeImageView/gen/*
 *.class
 *.swp
 *~
