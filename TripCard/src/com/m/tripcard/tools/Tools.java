@@ -7,10 +7,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Tools {
-	public static final String RegularAccout = "^[a-zA-Z][\\w_]+$";// ×ÖÄ¸¿ªÍ·¼Ó×ÖÄ¸»òÕßÊý×Ö
+	public static final String RegularAccout = "^[a-zA-Z][\\w_]+$";// ï¿½ï¿½Ä¸ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static final String RegularMobile = "^1[358]\\d{9}";
 	public static final String RegularEmail = "^[\\w_]+@[\\w_]+.[com|cn|net]$";
-	public static final String RegularPassword = "^[^\\s\u4e00-\u9fa5]";// ·Ç¿Õ°××Ö·ûºÍ·Çºº×Ö
+	public static final String RegularPassword = "^[^\\s\u4e00-\u9fa5]";// ï¿½Ç¿Õ°ï¿½ï¿½Ö·ï¿½Í·Çºï¿½ï¿½ï¿½
 
 	public static boolean editTextIsNullOrEmty(EditText editText) {
 		if (editText == null)
@@ -37,8 +37,7 @@ public class Tools {
 	}
 
 	public static void toast(Context context, int rourceId) {
-		Toast.makeText(context, context.getResources().getString(rourceId),
-				Toast.LENGTH_SHORT).show();
+		toast(context, context.getResources().getString(rourceId));
 	}
 
 	public static boolean checkNetworkAvailable(Context context) {

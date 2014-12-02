@@ -10,5 +10,8 @@
     <string name="mobile_is_illegal">手机号码输入格式不正确,请重新输入</string>
     <string name="email_is_illegal">电子邮箱地址格式不正确,请重新输入</string>
     <string name="password_is_illegal">密码输入格式不正确,请重新输入</string>
+    <string name="back">返回</string>
+    <string name="login_qq">QQ登录</string>
+    <string name="login_weibo">微博登录</string>
 
 </resources>
