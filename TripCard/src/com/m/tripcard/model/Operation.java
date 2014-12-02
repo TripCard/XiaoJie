@@ -2,17 +2,17 @@ package com.m.tripcard.model;
 
 public enum Operation {
 	/**
-	 * 注册
+	 * 娉ㄥ唽
 	 */
 	Register,
 
 	/**
-	 * 找回密码
+	 * 鎵惧洖瀵嗙爜
 	 */
 	FindPassword,
 
 	/**
-	 * 验证账户
+	 * 楠岃瘉璐︽埛
 	 */
 	Login,
 }

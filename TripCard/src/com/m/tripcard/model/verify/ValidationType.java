@@ -2,17 +2,17 @@ package com.m.tripcard.model.verify;
 
 public enum ValidationType {
 	/**
-	 * ×¢²á
+	 * æ³¨å†Œ
 	 */
 	Register,
 
 	/**
-	 * ÕÒ»ØÃÜÂë
+	 * æ‰¾å›å¯†ç 
 	 */
 	FindPassword,
 
 	/**
-	 * ÑéÖ¤ÕË»§
+	 * éªŒè¯è´¦æˆ·
 	 */
 	VerifyAccount,
 }
