@@ -1,4 +1,4 @@
-package com.m.tripcard.ui.activity.finpassword;
+package com.m.tripcard.ui.activity.findpassword;
 
 import com.m.tripcard.ui.activity.BaseActivity;
 

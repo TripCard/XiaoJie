@@ -3,14 +3,16 @@ package com.m.tripcard.tools;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class Tools {
 	public static final String RegularAccout = "^[a-zA-Z][\\w_]+$";
 	public static final String RegularMobile = "^1[358]\\d{9}";
-	public static final String RegularEmail = "^[\\w_]+@[\\w_]+.[com|cn|net]$";
-	public static final String RegularPassword = "^[^\\s\u4e00-\u9fa5]";
+	public static final String RegularEmail = "^[\\w_]+@[\\w_]+.[a-zA-Z]+$";
+	public static final String RegularPassword = "^[^\\s\u4e00-\u9fa5]+";
 
 	public static boolean editTextIsNullOrEmty(EditText editText) {
 		if (editText == null)
@@ -29,7 +31,7 @@ public class Tools {
 	}
 
 	public static boolean matchStr(String str, String regularStr) {
-		return true;
+		return str.matches(regularStr);
 	}
 
 	public static void toast(Context context, String error) {
@@ -54,7 +56,7 @@ public class Tools {
 				.getSystemService(Context.CONNECTIVITY_SERVICE);
 		return cm.getActiveNetworkInfo();
 	}
-	
+
 	/** 检查是否有网络 */
 	public static boolean isNetworkAvailable(Context context) {
 		NetworkInfo info = getNetworkInfo(context);
@@ -91,5 +93,12 @@ public class Tools {
 			return true;
 		else
 			return false;
+	}
+
+	public static void hideKeyboradInput(Context context, View view) {
+		InputMethodManager inputManager = (InputMethodManager) context
+				.getSystemService(Context.INPUT_METHOD_SERVICE);
+		inputManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
+
 	}
 }

@@ -28,10 +28,13 @@
         </activity>
         <activity android:name="com.m.tripcard.ui.activity.login.LoginActivity" >
         </activity>
+        <activity android:name="com.m.tripcard.ui.activity.register.RegisterActivity" >
+        </activity>
+        <activity android:name="com.m.tripcard.ui.activity.findpassword.FindPasswordActivity" >
+        </activity>
         <activity android:name="com.m.tripcard.ui.activity.MainActivity" >
         </activity>
-        
-        
+
         <!-- qq回调需要注册该activity -->
         <activity
             android:name="com.tencent.connect.common.AssistActivity"

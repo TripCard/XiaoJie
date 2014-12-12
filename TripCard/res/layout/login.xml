@@ -1,39 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mychat_bg"
-    android:orientation="vertical" >
+    android:background="#123456" >
 
-    <include layout="@layout/main_headbar" />
-
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/login_auth"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#999456"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
 
         <LinearLayout
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" >
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
 
-            <TextView
-                android:layout_marginRight="10dp"
+            <ImageView
                 android:id="@+id/login_qq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/wechat_64x64"
-                android:text="@string/login_qq" />
+                android:layout_marginRight="20dp"
+                android:src="@drawable/login_qq" />
 
-            <TextView
+            <ImageView
                 android:id="@+id/login_weibo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/weibo_64x64"
-                android:text="@string/login_weibo" />
+                android:src="@drawable/login_weibo" />
         </LinearLayout>
-    </RelativeLayout>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/login_auth_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_auth_title" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/user_name_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/email" />
+
+        <EditText
+            android:id="@+id/username_edit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_hint_username"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/password_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/password" />
+
+        <EditText
+            android:id="@+id/password_edit"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_hint_password"
+            android:inputType="textPassword"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="@string/login" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:text="@string/register"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forget_password"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>
