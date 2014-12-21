@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TripCard</string>
+    <string name="app_name">旅行印章</string>
     <string name="account_is_null">账号不能为空,请重新输入</string>
     <string name="mobile_is_null">手机不能为空,请重新输入</string>
     <string name="email_is_null">邮箱不能为空,请重新输入</string>
@@ -20,5 +20,14 @@
     <string name="login_hint_password">密码</string>
     <string name="login_auth_title">第三方平台登录</string>
     <string name="login_ing">正在登录...</string>
+    <string name="menu_setting_title">软件设置</string>
+    <string name="menu_feedback_title">意见反馈</string>
+    <string name="menu_binding_account_title">绑定账号</string>
+    <string name="menu_check_for_updates_title">检查更新</string>
+    <string name="menu_about_title">关于</string>
+    <string name="menu_my_collection_title">我的收藏</string>
+    <string name="menu_my_footprints_title">我的足迹</string>
+    <string name="menu_cancellation_landing_title">注销登陆</string>
+    <string name="version_info_title">版本号\t</string>
 
 </resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="flipper_left" type="id"/>
+    <item name="flipper_right" type="id"/>
+    <item name="flipper_master" type="id"/>
+
+</resources>
