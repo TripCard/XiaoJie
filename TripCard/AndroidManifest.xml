@@ -17,9 +17,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/app_theme" >
-        <activity
-            android:name="com.m.tripcard.ui.activity.TripCardActivity"
-            android:label="@string/app_name" >
+        <activity android:name="com.m.tripcard.ui.activity.AppLoadActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,11 +26,11 @@
         </activity>
         <activity android:name="com.m.tripcard.ui.activity.login.LoginActivity" >
         </activity>
+        <activity android:name="com.m.tripcard.ui.activity.MainActivity" >
+        </activity>
         <activity android:name="com.m.tripcard.ui.activity.register.RegisterActivity" >
         </activity>
         <activity android:name="com.m.tripcard.ui.activity.findpassword.FindPasswordActivity" >
-        </activity>
-        <activity android:name="com.m.tripcard.ui.activity.MainActivity" >
         </activity>
 
         <!-- qq回调需要注册该activity -->

@@ -1,13 +1,8 @@
 package com.m.tripcard.ui.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.m.tripcard.R;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,12 +56,10 @@ public class LeftMainFragment extends BaseFragment implements
 	}
 
 	private void initAdapter() {
-		// TODO Auto-generated method stub
 		mBaseAdapter = new BaseAdapter() {
 
 			@Override
 			public View getView(int position, View convertView, ViewGroup parent) {
-				// TODO Auto-generated method stub
 				RelativeLayout main = (RelativeLayout) RelativeLayout.inflate(
 						getActivity(), R.layout.menu_item, null);
 
@@ -83,19 +76,16 @@ public class LeftMainFragment extends BaseFragment implements
 
 			@Override
 			public long getItemId(int position) {
-				// TODO Auto-generated method stub
 				return 0;
 			}
 
 			@Override
 			public Object getItem(int position) {
-				// TODO Auto-generated method stub
 				return null;
 			}
 
 			@Override
 			public int getCount() {
-				// TODO Auto-generated method stub
 				return icons.length;
 			}
 		};
@@ -103,7 +93,6 @@ public class LeftMainFragment extends BaseFragment implements
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View view, int arg2, long arg3) {
-		// TODO Auto-generated method stub
 
 	}
 }

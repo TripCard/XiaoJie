@@ -2,7 +2,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_bg" >
+    android:background="@color/app_bg" >
 
     <RelativeLayout
         android:id="@+id/left_menu_top"

@@ -8,16 +8,13 @@ import org.json.JSONObject;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
-import cn.bmob.im.BmobUserManager;
 import cn.bmob.im.util.BmobLog;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.OtherLoginListener;
@@ -26,6 +23,7 @@ import cn.bmob.v3.listener.SaveListener;
 import com.m.tripcard.R;
 import com.m.tripcard.config.AppConfig;
 import com.m.tripcard.model.verify.InputValidate;
+import com.m.tripcard.tools.MLog;
 import com.m.tripcard.tools.Tools;
 import com.m.tripcard.tools.VerifyTools;
 import com.m.tripcard.ui.activity.BaseActivity;
@@ -34,6 +32,9 @@ import com.m.tripcard.ui.activity.findpassword.FindPasswordActivity;
 import com.m.tripcard.ui.activity.register.RegisterActivity;
 
 public class LoginActivity extends BaseActivity {
+
+	private final String TAG = "LoginActivity";
+
 	@InjectView(R.id.login_qq)
 	protected ImageView loginQQ;
 	@InjectView(R.id.login_weibo)
@@ -50,23 +51,25 @@ public class LoginActivity extends BaseActivity {
 	protected TextView forgetPwdBTN;
 
 	@InjectView(R.id.login)
-	protected Button loginBTN;
-
-	private BmobUserManager userManager;
+	protected ImageView loginBTN;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.login);
 
-		userManager = BmobUserManager.getInstance(this);
+		isRemeberUser();
+
+		ButterKnife.inject(this);
+	}
+
+	private void isRemeberUser() {
 		BmobUser user = BmobUser.getCurrentUser(this);
 		if (user != null) {
 			Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 			startActivity(intent);
+			finish();
 		}
-
-		ButterKnife.inject(this);
 	}
 
 	@OnClick({ R.id.login_weibo, R.id.login_qq, R.id.login, R.id.register,
@@ -156,8 +159,7 @@ public class LoginActivity extends BaseActivity {
 
 			@Override
 			public void onSuccess(JSONObject userAuth) {
-				Tools.toast(getContext(), "QQ登陆成功返回:" + userAuth.toString());
-				Log.i("login", "QQ登陆成功返回:" + userAuth.toString());
+				MLog.i(TAG, "QQ登陆成功返回:" + userAuth.toString());
 				// 下面则是返回的json字符
 				// {
 				// "qq": {
@@ -176,12 +178,12 @@ public class LoginActivity extends BaseActivity {
 
 			@Override
 			public void onFailure(int code, String msg) {
-				Tools.toast(getContext(), "第三方登陆失败：" + msg);
+				MLog.i(TAG, "qq登陆成功返回" + msg);
 			}
 
 			@Override
 			public void onCancel() {
-				Tools.toast(getContext(), "取消QQ登陆");
+				MLog.i(TAG, "取消weibo登陆");
 			}
 		});
 	}
@@ -192,8 +194,7 @@ public class LoginActivity extends BaseActivity {
 
 					@Override
 					public void onSuccess(JSONObject userAuth) {
-						Tools.toast(getContext(), "weibo登陆成功返回:" + userAuth);
-						Log.i("login", "weibo登陆成功返回:" + userAuth.toString());
+						MLog.i(TAG, "weibo登陆成功返回" + userAuth.toString());
 						// {
 						// "weibo": {
 						// "uid": "2696876973",
@@ -211,12 +212,12 @@ public class LoginActivity extends BaseActivity {
 					@Override
 					public void onFailure(int code, String msg) {
 						// 若出现授权失败(authData error)，可清除该应用缓存，之后在授权新浪登陆
-						Tools.toast(getContext(), "第三方登陆失败：" + msg);
+						MLog.i(TAG, "weibo登陆成功返回" + msg);
 					}
 
 					@Override
 					public void onCancel() {
-						Tools.toast(getContext(), "取消weibo登陆");
+						MLog.i(TAG, "取消weibo登陆");
 					}
 				});
 	}

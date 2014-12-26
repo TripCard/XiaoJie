@@ -1,19 +1,11 @@
 package com.m.tripcard.ui.fragment;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.InjectView;
-
 import com.m.tripcard.R;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,7 +13,6 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -70,7 +61,6 @@ public class RightMainFragment extends BaseFragment implements
 	}
 
 	private void initViews() {
-		// TODO Auto-generated method stub
 
 		parent = (RelativeLayout) RelativeLayout.inflate(getActivity(),
 				R.layout.trip_card_right, null);
@@ -103,12 +93,10 @@ public class RightMainFragment extends BaseFragment implements
 	}
 
 	private void initAdapter() {
-		// TODO Auto-generated method stub
 		mBaseAdapter = new BaseAdapter() {
 
 			@Override
 			public View getView(int position, View convertView, ViewGroup parent) {
-				// TODO Auto-generated method stub
 				RelativeLayout main = (RelativeLayout) RelativeLayout.inflate(
 						getActivity(), R.layout.menu_item, null);
 
@@ -125,19 +113,16 @@ public class RightMainFragment extends BaseFragment implements
 
 			@Override
 			public long getItemId(int position) {
-				// TODO Auto-generated method stub
 				return 0;
 			}
 
 			@Override
 			public Object getItem(int position) {
-				// TODO Auto-generated method stub
 				return null;
 			}
 
 			@Override
 			public int getCount() {
-				// TODO Auto-generated method stub
 				return icons.length;
 			}
 		};

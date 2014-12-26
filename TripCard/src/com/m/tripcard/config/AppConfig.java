@@ -9,5 +9,5 @@ public class AppConfig {
 	public static final String WECAHT_ID = "";
 	
 	//还得重新申请QQ的AppID
-	public static final String QQ_ID = "222222";
+	public static final String QQ_ID = "1103704135";
 }

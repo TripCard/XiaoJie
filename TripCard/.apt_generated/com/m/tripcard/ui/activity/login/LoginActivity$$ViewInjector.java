@@ -7,7 +7,7 @@ import butterknife.ButterKnife.Finder;
 public class LoginActivity$$ViewInjector {
   public static void inject(Finder finder, final com.m.tripcard.ui.activity.login.LoginActivity target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2130968580, "field 'loginQQ' and method 'onMenuClick'");
+    view = finder.findRequiredView(source, 2131099652, "field 'loginQQ' and method 'onMenuClick'");
     target.loginQQ = (android.widget.ImageView) view;
     view.setOnClickListener(
       new android.view.View.OnClickListener() {
@@ -17,8 +17,8 @@ public class LoginActivity$$ViewInjector {
           target.onMenuClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2130968581, "field 'loginWeibo' and method 'onMenuClick'");
-    target.loginWeibo = (android.widget.ImageView) view;
+    view = finder.findRequiredView(source, 2131099662, "field 'forgetPwdBTN' and method 'onMenuClick'");
+    target.forgetPwdBTN = (android.widget.TextView) view;
     view.setOnClickListener(
       new android.view.View.OnClickListener() {
         @Override public void onClick(
@@ -27,8 +27,10 @@ public class LoginActivity$$ViewInjector {
           target.onMenuClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2130968588, "field 'loginBTN' and method 'onMenuClick'");
-    target.loginBTN = (android.widget.Button) view;
+    view = finder.findRequiredView(source, 2131099659, "field 'passwordEdit'");
+    target.passwordEdit = (android.widget.EditText) view;
+    view = finder.findRequiredView(source, 2131099660, "field 'loginBTN' and method 'onMenuClick'");
+    target.loginBTN = (android.widget.ImageView) view;
     view.setOnClickListener(
       new android.view.View.OnClickListener() {
         @Override public void onClick(
@@ -37,7 +39,7 @@ public class LoginActivity$$ViewInjector {
           target.onMenuClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2130968589, "field 'registerBTN' and method 'onMenuClick'");
+    view = finder.findRequiredView(source, 2131099661, "field 'registerBTN' and method 'onMenuClick'");
     target.registerBTN = (android.widget.TextView) view;
     view.setOnClickListener(
       new android.view.View.OnClickListener() {
@@ -47,12 +49,10 @@ public class LoginActivity$$ViewInjector {
           target.onMenuClick(p0);
         }
       });
-    view = finder.findRequiredView(source, 2130968587, "field 'passwordEdit'");
-    target.passwordEdit = (android.widget.EditText) view;
-    view = finder.findRequiredView(source, 2130968585, "field 'userNameEdit'");
+    view = finder.findRequiredView(source, 2131099657, "field 'userNameEdit'");
     target.userNameEdit = (android.widget.EditText) view;
-    view = finder.findRequiredView(source, 2130968590, "field 'forgetPwdBTN' and method 'onMenuClick'");
-    target.forgetPwdBTN = (android.widget.TextView) view;
+    view = finder.findRequiredView(source, 2131099653, "field 'loginWeibo' and method 'onMenuClick'");
+    target.loginWeibo = (android.widget.ImageView) view;
     view.setOnClickListener(
       new android.view.View.OnClickListener() {
         @Override public void onClick(
@@ -65,11 +65,11 @@ public class LoginActivity$$ViewInjector {
 
   public static void reset(com.m.tripcard.ui.activity.login.LoginActivity target) {
     target.loginQQ = null;
-    target.loginWeibo = null;
+    target.forgetPwdBTN = null;
+    target.passwordEdit = null;
     target.loginBTN = null;
     target.registerBTN = null;
-    target.passwordEdit = null;
     target.userNameEdit = null;
-    target.forgetPwdBTN = null;
+    target.loginWeibo = null;
   }
 }
