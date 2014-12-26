@@ -5,8 +5,25 @@
     android:background="@color/app_bg" >
 
     <TextView
-        
-        android:layout_width="80dp"
-        android:layout_height="40dp" />
+        android:id="@+id/header_back"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/header_horizontal_margin"
+        android:gravity="right"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="@string/back"
+        android:textSize="@dimen/headbar_h2_textsize" />
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textSize="@dimen/headbar_h1_textsize" />
 
 </RelativeLayout>

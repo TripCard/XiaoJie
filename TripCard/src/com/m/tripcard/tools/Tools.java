@@ -34,8 +34,17 @@ public class Tools {
 		return str.matches(regularStr);
 	}
 
+	public static void toast(Context context, String error,
+			boolean isShowLongTime) {
+		if (isShowLongTime) {
+			Toast.makeText(context, error, Toast.LENGTH_LONG).show();
+		} else {
+			Toast.makeText(context, error, Toast.LENGTH_SHORT).show();
+		}
+	}
+
 	public static void toast(Context context, String error) {
-		Toast.makeText(context, error, Toast.LENGTH_SHORT).show();
+		toast(context, error, false);
 	}
 
 	public static void toast(Context context, int rourceId) {

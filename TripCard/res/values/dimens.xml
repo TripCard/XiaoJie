@@ -6,5 +6,8 @@
     <dimen name="left_menu_width">278dp</dimen>
     <dimen name="menu_item_height">52dp</dimen>
     <dimen name="headbar_height">50dp</dimen>
+    <dimen name="headbar_h2_textsize">23sp</dimen>
+    <dimen name="headbar_h1_textsize">28sp</dimen>
+    <dimen name="header_horizontal_margin">10dp</dimen>
 
 </resources>
