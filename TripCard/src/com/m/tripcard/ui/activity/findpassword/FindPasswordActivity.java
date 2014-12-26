@@ -31,9 +31,9 @@ public class FindPasswordActivity extends BaseActivity {
 	protected TextView backBTN;
 	@InjectView(R.id.header_title)
 	protected TextView title;
+	
 	@InjectView(R.id.reset_pwd_btn)
 	protected Button resetPwdBTN;
-
 	@InjectView(R.id.reset_mail)
 	protected EditText resetMail;
 	@InjectView(R.id.countdown_time)

@@ -1,4 +1,4 @@
-package com.m.tripcard.model;
+package com.m.tripcard.model.verify;
 
 public enum Operation {
 	/**
